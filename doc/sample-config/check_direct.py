@@ -13,17 +13,17 @@ for domain in directlist:
         direct_cn.write(domain + '\n')
         print domain + ': cn'
     else:
-        p = subprocess.Popen(['ping', domain], stdout=subprocess.PIPE)
+        p = subprocess.Popen(['ping', '-c', '2', domain], stdout=subprocess.PIPE)
         streamdata = p.communicate()[0]
         ret = p.returncode
-        #ret = os.system('ping {}'.format(domain))
+        # ret = os.system('ping {}'.format(domain))
         if ret == 0:
             direct_ok.write(domain + '\n')
             print domain + ': ok'
         else:
             direct_fail.write(domain + '\n')
             print domain + ': fail'
-            
+
 direct_cn.close()
 direct_ok.close()
 direct_fail.close()
