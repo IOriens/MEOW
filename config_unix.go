@@ -12,10 +12,9 @@ const (
 	proxyFname   = "proxy"
 	rejectFname  = "reject"
 	CNIPFname    = "china_ip_list"
-
 	newLine = "\n"
 )
 
 func getDefaultRcFile() string {
-	return path.Join(path.Join(getUserHomeDir(), ".meow", rcFname))
+	return path.Join(getUserHomeDir(), ".meow", rcFname)
 }

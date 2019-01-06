@@ -108,13 +108,13 @@ func (d errorLogging) Println(args ...interface{}) {
 
 func (d requestLogging) Printf(format string, args ...interface{}) {
 	if d {
-		requestLog.Printf(format, args...)
+		// requestLog.Printf(format, args...)
 	}
 }
 
 func (d responseLogging) Printf(format string, args ...interface{}) {
 	if d {
-		responseLog.Printf(format, args...)
+		// responseLog.Printf(format, args...)
 	}
 }
 

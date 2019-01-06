@@ -654,7 +654,7 @@ func (c *clientConn) getServerConn(r *Request) (*serverConn, error) {
 	// For CONNECT method, always create new connection.
 	direct := (domainType == domainTypeDirect)
 	if domainType == domainTypeReject {
-		dbgRq.Printf("%s REJECT\n", r.URL)
+		dbgRq.Printf("REJECT %s\n", r.URL)
 		return nil, errors.New("Reject")
 	}
 
