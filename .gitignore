@@ -1,4 +1,6 @@
 bin/
+.vscode
+debug
 *.sublime*
 meow-proxy
 MEOW

@@ -1,5 +1,10 @@
 # MEOW Proxy
 
+> 根据自己的需求做了一些更改
+- 不支持命令行传参（原来的逻辑有问题）
+- 只输出错误日志，不输出访问记录
+
+
 当前版本：1.5 [CHANGELOG](CHANGELOG.md)
 [![Build Status](https://travis-ci.org/netheril96/MEOW.png?branch=master)](https://travis-ci.org/netheril96/MEOW)
 

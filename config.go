@@ -707,28 +707,28 @@ func upgradeConfig(rc string, lines []string) {
 }
 
 func overrideConfig(oldconfig, override *Config) {
-	newVal := reflect.ValueOf(override).Elem()
-	oldVal := reflect.ValueOf(oldconfig).Elem()
+	// newVal := reflect.ValueOf(override).Elem()
+	// oldVal := reflect.ValueOf(oldconfig).Elem()
 
-	// typeOfT := newVal.Type()
-	for i := 0; i < newVal.NumField(); i++ {
-		newField := newVal.Field(i)
-		oldField := oldVal.Field(i)
-		// log.Printf("%d: %s %s = %v\n", i,
-		// typeOfT.Field(i).Name, newField.Type(), newField.Interface())
-		switch newField.Kind() {
-		case reflect.String:
-			s := newField.String()
-			if s != "" {
-				oldField.SetString(s)
-			}
-		case reflect.Int:
-			i := newField.Int()
-			if i != 0 {
-				oldField.SetInt(i)
-			}
-		}
-	}
+	// // typeOfT := newVal.Type()
+	// for i := 0; i < newVal.NumField(); i++ {
+	// 	newField := newVal.Field(i)
+	// 	oldField := oldVal.Field(i)
+	// 	// log.Printf("%d: %s %s = %v\n", i,
+	// 	// typeOfT.Field(i).Name, newField.Type(), newField.Interface())
+	// 	switch newField.Kind() {
+	// 	case reflect.String:
+	// 		s := newField.String()
+	// 		if s != "" {
+	// 			oldField.SetString(s)
+	// 		}
+	// 	case reflect.Int:
+	// 		i := newField.Int()
+	// 		if i != 0 {
+	// 			oldField.SetInt(i)
+	// 		}
+	// 	}
+	// }
 }
 
 // Must call checkConfig before using config.
